@@ -81,6 +81,12 @@ The complete Arduino source code is available in:
 
 `sketch.ino`
 
+## 🎥 Simulation & Demonstration Links
+
+- **Wokwi Simulation:** https://wokwi.com/projects/479599653547906049
+- **Google Drive Demo Video:** PASTE_YOUR_GOOGLE_DRIVE_LINK
+- **HiveMQ WebSocket Client:** https://www.hivemq.com/demos/websocket-client/
+
 **Required Libraries:**
 
 - DHT Sensor Library
@@ -119,72 +125,6 @@ The project uses the public HiveMQ MQTT broker for communication.
 
 The publishing and subscription topics must be identical to receive the sensor data.
 
-## 🔗 HiveMQ WebSocket Client Configuration
-
-The HiveMQ WebSocket Client is used to receive and monitor the published sensor data.
-
-**WebSocket Client:**  
-https://www.hivemq.com/demos/websocket-client/
-
-### Connection Settings
-
-| Parameter | Value |
-|---|---|
-| Host | broker.hivemq.com |
-| Port | 8884 |
-| Client ID | mukta_esp32_test01 |
-| Username | Empty |
-| Password | Empty |
-| Keep Alive | 60 Seconds |
-| SSL | Disabled |
-| Clean Session | Enabled |
-
-### Publish Settings
-
-| Parameter | Value |
-|---|---|
-| Topic | mec/cse08/industrial-monitor/temperature |
-| QoS | 0 |
-| Retain | Disabled |
-
-### Subscription Settings
-
-- Subscribe to: `mec/cse08/industrial-monitor/temperature`
-- QoS: 0
-
-After connecting and subscribing, incoming MQTT messages will appear in the Messages section.
-
-## 🧪 Testing and Verification
-
-The following tests are performed to verify the system:
-
-**1. Wi-Fi Connection Test**
-- Start the Wokwi simulation.
-- Check the Wi-Fi connection status in the Serial Monitor.
-- Verify that the ESP32 connects to Wokwi-GUEST.
-
-**2. MQTT Publishing Test**
-- Connect to the HiveMQ WebSocket Client.
-- Subscribe to the configured temperature topic.
-- Verify that temperature and humidity data appear in the Messages section.
-
-**3. Sensor Monitoring Test**
-- Check the sensor readings in the Serial Monitor.
-- Verify that the readings are published as JSON messages.
-
-**4. Offline Connectivity Test**
-- Temporarily disconnect Wi-Fi.
-- Verify that the ESP32 detects the disconnection.
-- Check that MQTT publishing is interrupted.
-- Restore Wi-Fi connectivity.
-- Verify automatic reconnection and resumed publishing.
-
-## 🎥 Simulation & Demonstration Links
-
-- **Wokwi Simulation:** https://wokwi.com/projects/479599653547906049
-- **Google Drive Demo Video:** PASTE_YOUR_GOOGLE_DRIVE_LINK
-- **HiveMQ WebSocket Client:** https://www.hivemq.com/demos/websocket-client/
-
 ## 📚 Technologies Used
 
 - ESP32
@@ -195,19 +135,6 @@ The following tests are performed to verify the system:
 - PubSubClient Library
 - HiveMQ MQTT Broker
 - Wokwi Simulator
-
-## 👩‍💻 Project Information
-
-| Category | Details |
-|---|---|
-| Project Name | Industrial Temperature & Humidity Monitoring System |
-| Platform | ESP32 |
-| Simulator | Wokwi |
-| MQTT Client | HiveMQ WebSocket Client |
-| Programming Language | C++ |
-| Project Type | IoT / Embedded Systems |
-
----
 
 **Conclusion**
 
