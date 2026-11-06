@@ -136,8 +136,6 @@ The publishing and subscription topics must be identical to receive the sensor d
 - HiveMQ MQTT Broker
 - Wokwi Simulator
 
-**Conclusion**
 
 This project demonstrates an IoT-based monitoring system that collects temperature and humidity data using the DHT22 sensor and transmits the readings through MQTT communication. It also demonstrates Wi-Fi connectivity, real-time data monitoring, and automatic network reconnection.
 
-Developed as part of an Embedded Systems / IoT task.
